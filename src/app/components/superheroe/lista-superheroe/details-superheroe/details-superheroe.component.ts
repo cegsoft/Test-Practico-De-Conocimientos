@@ -1,5 +1,6 @@
 import { Component, Inject,  OnDestroy, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { DetailSuperheroe } from 'src/app/model/datail.superhero';
 import { SuperheroesService } from 'src/app/services/superheroes.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { SuperheroesService } from 'src/app/services/superheroes.service';
 })
 export class DetailsSuperheroeComponent implements OnInit, OnDestroy {
 
-  detailSuperhero!: DetailSuperheroe ;
+  detailSuperhero!: DetailSuperheroe  ;
 
 
   constructor(public dialogRef: MatDialogRef<any>,
@@ -17,7 +18,7 @@ export class DetailsSuperheroeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
-    this.server.getDetailsSuperHero(this.idSuperhero).subscribe( n => this.detailSuperhero = n.data);
+    this.server.getDetailsSuperHero(this.idSuperhero).subscribe( n => {this.detailSuperhero = n.data;});
   }
 
   ngOnDestroy(): void {

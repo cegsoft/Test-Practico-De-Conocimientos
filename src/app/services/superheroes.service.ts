@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
+import { DataDetailSuperheroe } from '../model/datail.superhero';
 import { AllData } from '../model/superheroe';
 
 @Injectable({
@@ -28,11 +29,8 @@ export class SuperheroesService {
 
 
   getDetailsSuperHero(id: number): Observable<DataDetailSuperheroe>  {
-  return this.http.get<DataDetailSuperheroe>(`${this.url}/${id}`).pipe();
+  return this.http.get<DataDetailSuperheroe>(`${this.url}/${id}`).pipe(  );
   }
-
-
-
 
 
 }

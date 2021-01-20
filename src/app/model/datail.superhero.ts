@@ -1,8 +1,8 @@
-interface DataDetailSuperheroe {
+export interface DataDetailSuperheroe {
   data: DetailSuperheroe;
 }
 
-interface DetailSuperheroe {
+export interface DetailSuperheroe {
   id: number;
   nombre: string;
   puedeVolar: boolean;
