@@ -1,0 +1,24 @@
+<mat-form-field>
+  <mat-label>Filtrar por nombre</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ejem. Wonder woman" #input>
+</mat-form-field>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+  <ng-container matColumnDef="number">
+    <th mat-header-cell *matHeaderCellDef> Superh&eacute;roes </th>
+    <td mat-cell *matCellDef="let element" (click)="openDialog(element.id)">
+      <app-item-lista-superheroe [supereroe]=element></app-item-lista-superheroe>
+    </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">No hay datos que coincidan con el filtro "{{input.value}}"</td>
+  </tr>
+</table>

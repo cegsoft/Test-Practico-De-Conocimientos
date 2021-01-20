@@ -1,0 +1,45 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.photo {
+  align-self: center;
+  flex: 0 1 auto;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-left: 3rem;
+  margin-right: 4rem;
+}
+
+.photo img {
+  display: block;
+  object-fit: cover;
+  width: 70px;
+  height: 70px;
+  max-width: 10vh;
+  max-height: 10vh;
+  border-radius: 150px;
+}
+
+@media screen and (max-width: 600px) {
+  .photo {
+    margin-left: 0.1rem;
+    margin-right: 2rem;
+  }
+}
+
+.details {
+  align-self: flex-start;
+  margin-top: 5px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}

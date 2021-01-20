@@ -1,0 +1,13 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+th {
+  font-size: 1.5rem;
+  background-color: rgba(241, 241, 241, 0.657);
+}

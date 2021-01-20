@@ -1,0 +1,42 @@
+
+<h2 mat-dialog-title class="text-center" >Detalle de Superhéroe  </h2>
+
+<mat-dialog-content class="mat-typography size ">
+
+<div class="card-superhero">
+  <mat-card class="card">
+    <mat-card-header class="header">
+    <div mat-card-avatar class="header-image"  >
+      <img mat-card-image src="{{detailSuperhero?.avatarURL}} "
+      onerror="this.src='https://www.pequenomundo.cl/wp-content/themes/childcare/images/default.png';"  >
+    </div>
+      <mat-card-title>{{detailSuperhero?.nombre }}</mat-card-title>
+      <mat-card-subtitle>{{detailSuperhero?.nombreReal }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="detailSuperhero?.avatarURL"
+    onerror="this.src='https://www.pequenomundo.cl/wp-content/themes/childcare/images/default.png';" >
+    <mat-card-content>
+      <p>
+        {{detailSuperhero?.descripcion}};
+      </p>
+
+      <ul class="list-group">
+        <li class="list-group-item active" aria-current="true">Habilidades</li>
+        <li class="list-group-item" *ngFor="let item of detailSuperhero?.habilidades">{{item}}</li>
+      </ul>
+
+
+
+    </mat-card-content>
+    <mat-card-actions>
+
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+
+
+<button mat-button (click)="onNoClick()" class="close ml-auto">Cerrar</button>
+</mat-dialog-content>
+
+
