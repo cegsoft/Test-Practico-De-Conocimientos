@@ -1,5 +1,4 @@
 import { Component, Inject,  OnDestroy, OnInit } from '@angular/core';
-import { inject } from '@angular/core/testing';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { SuperheroesService } from 'src/app/services/superheroes.service';
 
@@ -10,7 +9,7 @@ import { SuperheroesService } from 'src/app/services/superheroes.service';
 })
 export class DetailsSuperheroeComponent implements OnInit, OnDestroy {
 
-  detailSuperhero: DetailSuperheroe | undefined;
+  detailSuperhero!: DetailSuperheroe ;
 
 
   constructor(public dialogRef: MatDialogRef<any>,
